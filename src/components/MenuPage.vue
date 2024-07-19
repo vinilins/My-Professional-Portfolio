@@ -1,88 +1,141 @@
 <template>
-    <div class="menu">
-      <h1>Vinícius Lins</h1>
+  <div class="menu">
+    <h1>Vinícius Lins</h1>
 
-      <ul>
-        <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">Home</a></li>
-        <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">About</a></li>
-        <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">Projects</a></li>
-        <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">Services</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Resume</a></li>
-      </ul>
-      
-      <div class="btns">
-        <button class="btn-contact-me">Contact Me</button>
-        <img class="dark-mode" src="../assets/dark-mode.svg" alt="Dark Mode" width="30" height="30">
-      </div>
+    <ul>
+      <li>
+        <a
+          class="btn-links-page"
+          href="https://router.vuejs.org"
+          target="_blank"
+          rel="noopener"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class="btn-links-page"
+          href="https://vuex.vuejs.org"
+          target="_blank"
+          rel="noopener"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          class="btn-links-page"
+          href="https://github.com/vuejs/vue-devtools#vue-devtools"
+          target="_blank"
+          rel="noopener"
+          >Projects</a
+        >
+      </li>
+      <li>
+        <a
+          class="btn-links-page"
+          href="https://vue-loader.vuejs.org"
+          target="_blank"
+          rel="noopener"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          class="btn-links-page"
+          href="https://github.com/vuejs/awesome-vue"
+          target="_blank"
+          rel="noopener"
+          >Resume</a
+        >
+      </li>
+    </ul>
 
+    <div class="btns">
+      <button class="btn-contact-me">Contact Me</button>
+      <img
+        class="dark-mode"
+        src="../assets/dark-mode.svg"
+        alt="Dark Mode"
+        width="30"
+        height="30"
+      />
     </div>
+  </div>
 </template>
-  
+
 <script>
-  export default {
-    name: 'MenuPage'
-  }
+export default {
+  name: "MenuPage",
+}
 </script>
-  
+
 <style scoped>
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 140px;
-    flex-direction: row;
-  }
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 140px;
+  flex-direction: row;
+}
 
-  h1 {
-    width: 30%;
-    font: 400 30px 'Oleo Script', cursive;
-  }
+h1 {
+  width: 30%;
+  font:
+    400 30px "Oleo Script",
+    cursive;
+}
 
-  ul {
-    font: 500 15px 'Montserrat', sans-serif;
-    display: flex;
-    width: 40%;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-    list-style-type: none;
-  }
+ul {
+  font:
+    500 15px "Montserrat",
+    sans-serif;
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
 
-  li {
-    margin: 0 4%;
-  }
+li {
+  margin: 0 4%;
+}
 
-  a {
-    color: #C1C1C1;
-    text-decoration: none;
-  }
+a {
+  color: #c1c1c1;
+  text-decoration: none;
+}
 
-  .btns {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 30%;
-    height: 100%;
-  }
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  height: 100%;
+}
 
+.btn-contact-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30%;
+  border: 1px solid #4fc3f7;
+  font:
+    500 12px "Montserrat",
+    sans-serif;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: transparent;
+}
 
-  .btn-contact-me {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 30%;
-    border: 1px solid #4FC3F7;
-    font: 500 12px 'Montserrat', sans-serif;
-    border-radius: 5px;
-    color: #FFFFFF;
-    background-color: transparent;
-  }
+.btn-links-page:hover {
+  color: #4fc3f7;
+}
 
-  .dark-mode {
-    color: #E1E1E1;
-  }
-
+.dark-mode {
+  color: #e1e1e1;
+}
 </style>
-  
