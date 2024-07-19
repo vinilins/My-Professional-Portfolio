@@ -3,7 +3,7 @@
         <div class="line">
             <h1>Let's<br/>Work Together -</h1>
 
-            <a href="https://router.vuejs.org" class="btn-send-email" target="_blank" rel="noopener">
+            <a href="mailto:viniciusaclins@gmail.com" class="btn-send-email" target="_blank" rel="noopener">
                 <img src="../assets/gmail-icon.svg" alt="Gmail"/>
                 viniciusaclins@gmail.com
             </a>
@@ -17,13 +17,15 @@
             </p>
 
             <ul class="footer-links">
-                <li><a class="social-links" href="https://router.vuejs.org" target="_blank" rel="noopener">
+                <li>
+                  <a class="social-links" href="https://www.linkedin.com/in/vinilins/?locale=en_US" target="_blank" rel="noopener">
                     <img src="../assets/linkedin-icon.svg" alt="LinkedIn"/>
-                    </a>
+                  </a>
                 </li>
-                <li><a class="social-links" href="https://vuex.vuejs.org" target="_blank" rel="noopener">
+                <li>
+                  <a class="social-links" href="https://github.com/vinilins" target="_blank" rel="noopener">
                     <img src="../assets/github-icon.svg" alt="GitHub"/>
-                    </a>
+                  </a>
                 </li>
             </ul>
         </div>

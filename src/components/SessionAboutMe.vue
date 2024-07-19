@@ -14,7 +14,7 @@
         Let's work together to transform your data into actionable insights that drive real results. Get in touch, and let's start unlocking the power of your data today!
       </p>
 
-      <a @click="openResume" class="btn-download-resume">
+      <a class="btn-download-resume" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing">
         Download Resume
       </a>
 
@@ -26,11 +26,6 @@
 <script>
   export default {
     name: 'SessionAboutMe',
-    methods: {
-      openResume() {
-        window.open('https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing', '_blank');
-      }
-    }
   }
 </script>
 

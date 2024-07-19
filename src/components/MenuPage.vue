@@ -3,11 +3,20 @@
       <h1>Vinícius Lins</h1>
 
       <ul>
-        <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">Home</a></li>
-        <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">About</a></li>
-        <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">Projects</a></li>
-        <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">Services</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Resume</a></li>
+        <li>
+          <a
+            class="btn-links-page"
+            href="https://router.vuejs.org" 
+            target="_blank"
+            rel="noopener">
+            Home
+          </a>
+        </li>
+        <li>
+          <a class="btn-links-page" href="https://vuex.vuejs.org" target="_blank" rel="noopener">About</a></li>
+        <li><a class="btn-links-page" href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">Projects</a></li>
+        <li><a class="btn-links-page" href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">Services</a></li>
+        <li><a class="btn-links-page" href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Resume</a></li>
       </ul>
       
       <div class="btns">
@@ -78,6 +87,10 @@
     border-radius: 5px;
     color: #FFFFFF;
     background-color: transparent;
+  }
+
+  .btn-links-page:hover {
+    color: #4FC3F7;
   }
 
   .dark-mode {

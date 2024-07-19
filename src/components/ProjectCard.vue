@@ -5,8 +5,14 @@
         </div>
 
         <h3>{{ title }}</h3>
-
-        <p>{{ text }}</p>
+        
+        <div class="btn-open-project">
+          <p>{{ text }}</p>
+          
+          <a href="https://github.com/vinilins/vl-investimentos" class="open-project-image" target="_blank" rel="noopener">
+            <img src="../assets/arrow-icon.svg" alt="">
+          </a>
+        </div>
 
     </div>
   </template>
@@ -48,6 +54,22 @@
         text-align: left;
         line-height: 1.5;
         letter-spacing: 0.5px;
+    }
+
+    .btn-open-project {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .open-project-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background-color: #4FC3F7;
     }
   
   </style>
