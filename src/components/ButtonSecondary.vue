@@ -34,4 +34,10 @@ export default {
   border-radius: 30px;
   background-color: transparent;
 }
+
+.btn-secondary:hover {
+  cursor: pointer;
+  background-color: #484e53;
+  color: #fff;
+}
 </style>
