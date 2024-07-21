@@ -5,9 +5,10 @@
       <h1>Vinícius Lins</h1>
       <h3>Software Engineer</h3>
       <p>
-        As a passionate data scientist, with expertise in machine learning, AI,
-        and data analytics, I thrive on the challenges of exploring complex data
-        landscapes and uncovering meaningful patterns that drive innovation
+        As a passionate software engineer with experience in web development,
+        backend, frontend, I thrive on the challenges of architecting project
+        structures and patterns to solve everyday problems in the development
+        environment.
       </p>
       <button @click="scrollToSessionAboutMe" class="btn-learn-more">
         Learn More
@@ -88,7 +89,17 @@ p {
     sans-serif;
   border-radius: 30px;
   color: #ffffff;
-  background-color: transparent;
+  background: linear-gradient(to left, transparent 50%, #4fc3f7 50%) right;
   margin-top: 3%;
+  background-size: 250%;
+  transition: all 0.5s ease-out;
+}
+
+.btn-learn-more:hover {
+  cursor: pointer;
+  background-position: left;
+  -webkit-transition: all 0.85s ease;
+  -o-transition: all 0.85s ease;
+  transition: all 0.85s ease;
 }
 </style>

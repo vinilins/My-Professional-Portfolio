@@ -1,16 +1,8 @@
 <template>
   <div class="centralization">
-    <div class="session-projects">
+    <div id="session-projects" class="session-projects">
       <h1>Projects</h1>
       <h3>Some of my Work</h3>
-
-      <div class="buttons-choice">
-        <ButtonSecondary text="Machine Learning" />
-        <ButtonSecondary text="SQL" />
-        <ButtonSecondary text="Power BI" />
-        <ButtonSecondary text="AI/LLMs" />
-        <ButtonSecondary text="Data Science" />
-      </div>
 
       <div class="projects-cards">
         <ProjectCard
@@ -34,19 +26,11 @@
           text="Python / Machine Learning"
         />
       </div>
-
-      <ButtonSecondary
-        class="btn-view-all"
-        text="View All"
-        textColor="white"
-        font="500 12px Inter, sans-serif"
-      />
     </div>
   </div>
 </template>
 
 <script>
-import ButtonSecondary from "./ButtonSecondary.vue"
 import ProjectCard from "./ProjectCard.vue"
 
 export default {
@@ -57,7 +41,6 @@ export default {
     }
   },
   components: {
-    ButtonSecondary,
     ProjectCard,
   },
 }
@@ -82,7 +65,7 @@ export default {
 
 .projects-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
   gap: 30px 120px;
   margin-top: 5%;
   width: 100%;
@@ -103,14 +86,6 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: -5px 0 30px 0;
-}
-
-.buttons-choice {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 10px;
 }
 
 .btn-view-all {

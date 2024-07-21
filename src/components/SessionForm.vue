@@ -1,6 +1,6 @@
 <template>
   <div class="centralization">
-    <div class="session-form">
+    <div id="session-form" class="session-form">
       <h1>Get in Touch</h1>
       <h3>Lets work together</h3>
 
