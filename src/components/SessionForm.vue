@@ -1,6 +1,6 @@
 <template>
   <div class="centralization">
-    <div class="session-form">
+    <div id="session-form" class="session-form">
       <h1>Get in Touch</h1>
       <h3>Lets work together</h3>
 
@@ -100,6 +100,26 @@ option {
   font:
     400 15px "Inter",
     sans-serif;
+  transition: all 0.55s ease;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("../assets/chevron-down.svg") no-repeat right center;
+}
+
+select:focus {
+  color: #484e53;
+  -webkit-transition: all 0.85s ease;
+  -o-transition: all 0.85s ease;
+  transition: all 0.85s ease;
+}
+
+option {
+  background-color: #1a1a1a;
+  padding: 10px;
 }
 
 textarea {

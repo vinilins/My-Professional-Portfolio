@@ -4,55 +4,32 @@
 
     <ul>
       <li>
-        <a
-          class="btn-links-page"
-          href="https://router.vuejs.org"
-          target="_blank"
-          rel="noopener"
-        >
-          Home
-        </a>
+        <a class="btn-links-page"> Home </a>
+      </li>
+      <li>
+        <a class="btn-links-page" @click="scrollToSessionAboutMe">About</a>
+      </li>
+      <li>
+        <a class="btn-links-page" @click="scrollToSessionServices">Services</a>
+      </li>
+      <li>
+        <a class="btn-links-page" @click="scrollToSessionProjects">Projects</a>
       </li>
       <li>
         <a
           class="btn-links-page"
-          href="https://vuex.vuejs.org"
           target="_blank"
           rel="noopener"
-          >About</a
-        >
-      </li>
-      <li>
-        <a
-          class="btn-links-page"
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >Projects</a
-        >
-      </li>
-      <li>
-        <a
-          class="btn-links-page"
-          href="https://vue-loader.vuejs.org"
-          target="_blank"
-          rel="noopener"
-          >Services</a
-        >
-      </li>
-      <li>
-        <a
-          class="btn-links-page"
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
+          href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing"
           >Resume</a
         >
       </li>
     </ul>
 
     <div class="btns">
-      <button class="btn-contact-me">Contact Me</button>
+      <button class="btn-contact-me" @click="scrollToSessionForm">
+        Contact Me
+      </button>
       <img
         class="dark-mode"
         src="../assets/dark-mode.svg"
@@ -67,6 +44,36 @@
 <script>
 export default {
   name: "MenuPage",
+  methods: {
+    scrollToSessionAboutMe() {
+      const bottomSection = document.getElementById("session-about-me")
+      window.scrollTo({
+        top: bottomSection.offsetTop,
+        behavior: "smooth",
+      })
+    },
+    scrollToSessionProjects() {
+      const bottomSection = document.getElementById("session-projects")
+      window.scrollTo({
+        top: bottomSection.offsetTop,
+        behavior: "smooth",
+      })
+    },
+    scrollToSessionServices() {
+      const bottomSection = document.getElementById("session-what-i-do")
+      window.scrollTo({
+        top: bottomSection.offsetTop,
+        behavior: "smooth",
+      })
+    },
+    scrollToSessionForm() {
+      const bottomSection = document.getElementById("session-form")
+      window.scrollTo({
+        top: bottomSection.offsetTop,
+        behavior: "smooth",
+      })
+    },
+  },
 }
 </script>
 
@@ -128,7 +135,18 @@ a {
     sans-serif;
   border-radius: 5px;
   color: #ffffff;
-  background-color: transparent;
+  background: linear-gradient(to left, transparent 50%, #4fc3f7 50%) right;
+  background-position: 100% 0;
+  background-size: 250%;
+  transition: all 0.5s ease-out;
+}
+
+.btn-contact-me:hover {
+  cursor: pointer;
+  background-position: left;
+  -webkit-transition: all 0.85s ease;
+  -o-transition: all 0.85s ease;
+  transition: all 0.85s ease;
 }
 
 .btn-links-page:hover {

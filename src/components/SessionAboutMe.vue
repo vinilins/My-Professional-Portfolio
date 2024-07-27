@@ -4,23 +4,23 @@
       <h1>About Me</h1>
       <h3>Get to know me</h3>
       <p>
-        Hi there! I'm [Your Name], a data scientist specializing in data
-        analytics, predictive modeling, natural language processing, machine
-        learning, and AI chatbots. With a passion for unraveling insights from
-        complex datasets, I'm dedicated to helping businesses make informed
-        decisions and stay ahead in today's data-driven world.
+        Hi there! I'm Vinícius, a Software Engineer specializing in web
+        development, backend, frontend and websites. With a passion for using
+        design patterns for development, I am dedicated to helping customers
+        through software solutions to become more independent and automated
+        through systems or websites, giving them productive time to focus their
+        efforts on other areas or topics.
       </p>
       <p>
-        I bring a blend of technical expertise, hands-on experience, and a
-        commitment to clear communication to every project. Whether it's
-        uncovering hidden patterns, predicting future trends, or automating
-        processes with AI, I'm here to help you harness the full potential of
-        your data.
+        I bring a mix of technical knowledge, practical experience and a
+        commitment to clear communication for each project, whether simple web
+        systems, or developing complex systems that involve multiple business
+        rules useful for each context
       </p>
       <p>
-        Let's work together to transform your data into actionable insights that
-        drive real results. Get in touch, and let's start unlocking the power of
-        your data today!
+        Let's work together to turn ideas into actionable insights that generate
+        real results. Get in touch and let's start unlocking the advancement of
+        technology!
       </p>
 
       <a
@@ -46,7 +46,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 14%;
 }
 
 .session-about-me {
@@ -95,8 +95,16 @@ p {
     sans-serif;
   border-radius: 30px;
   color: #ffffff;
-  background-color: transparent;
+  background: linear-gradient(to left, transparent 50%, #4fc3f7 50%) right;
+  background-size: 250%;
   margin-top: 3%;
   text-decoration: none;
+}
+
+.btn-download-resume:hover {
+  background-position: left;
+  -webkit-transition: all 0.85s ease;
+  -o-transition: all 0.85s ease;
+  transition: all 0.85s ease;
 }
 </style>

@@ -45,8 +45,8 @@ export default {
 }
 
 img {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   fill: #1a1a1a;
 }
 

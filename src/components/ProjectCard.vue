@@ -1,22 +1,24 @@
 <template>
-  <div class="project-card">
-    <div class="project-image">
-      <img :src="image" alt="Ícone de serviço" width="355px" height="199px" />
-    </div>
+  <div class="project-centralization">
+    <div class="project-card">
+      <div class="project-image">
+        <img :src="image" alt="Ícone de serviço" width="355px" height="199px" />
+      </div>
 
-    <h3>{{ title }}</h3>
+      <h3>{{ title }}</h3>
 
-    <div class="btn-open-project">
-      <p>{{ text }}</p>
+      <div class="btn-open-project">
+        <p>{{ text }}</p>
 
-      <a
-        href="https://github.com/vinilins/vl-investimentos"
-        class="open-project-image"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="../assets/arrow-icon.svg" alt="" />
-      </a>
+        <a
+          href="https://github.com/vinilins/vl-investimentos"
+          class="open-project-image"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="../assets/arrow-icon.svg" alt="" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -33,11 +35,17 @@ export default {
 </script>
 
 <style scoped>
+.project-centralization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 100%;
+  width: 355px;
 }
 
 .project-image {
