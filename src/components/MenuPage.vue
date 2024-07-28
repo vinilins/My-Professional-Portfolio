@@ -45,33 +45,51 @@
         alt=""
         width="30"
         height="30"
-        @click="toggleMenu"
+        @click="toggleMenu('.menu-icon')"
       />
 
-      <ul class="hamburguer-menu">
-        <li class="hamburguer-btn">
-          <a class="btn-links-page" @click="toggleMenu"> Home </a>
-        </li>
-        <li class="hamburguer-btn">
-          <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu();">About</a>
-        </li>
-        <li class="hamburguer-btn">
-          <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu();">Services</a>
-        </li>
-        <li class="hamburguer-btn">
-          <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu();">Projects</a>
-        </li>
-        <li class="hamburguer-btn">
-          <a
-            class="btn-links-page"
-            target="_blank"
-            rel="noopener"
-            href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing"
-            @click="toggleMenu"
-            >Resume</a
-          >
-        </li>
-      </ul>
+      <div class="hamburguer-div">
+        <img
+          class="menu-icon-div"
+          src="../assets/menu-icon.svg"
+          alt=""
+          width="30"
+          height="30"
+          @click="toggleMenu('.hamburguer-div')"
+        />
+
+        <ul class="hamburguer-menu">
+          <li class="hamburguer-btn">
+            <a class="btn-links-page" @click="toggleMenu('.hamburguer-div')"> Home </a>
+          </li>
+          <li class="hamburguer-btn">
+            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">About</a>
+          </li>
+          <li class="hamburguer-btn">
+            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">Services</a>
+          </li>
+          <li class="hamburguer-btn">
+            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">Projects</a>
+          </li>
+          <li class="hamburguer-btn">
+            <a
+              class="btn-links-page"
+              target="_blank"
+              rel="noopener"
+              href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing"
+              >Resume</a
+            >
+          </li>
+          <img
+            class="dark-mode"
+            src="../assets/dark-mode.svg"
+            alt="Dark Mode"
+            width="30"
+            height="30"
+            @click="toggleMenu('.hamburguer-div')"
+          />
+        </ul>
+      </div>
 
   </div>
 </template>
@@ -90,32 +108,38 @@ export default {
     updateWindowSize() {
       this.windowWidth = window.innerWidth;
       if (this.windowWidth > 1000) {
-        const hamburguerMenu = document.querySelector(".hamburguer-menu")
+        const hamburguerDiv = document.querySelector(".hamburguer-div")
         const menuIcon = document.querySelector(".menu-icon")
 
-        hamburguerMenu.style.display = "none"
+        hamburguerDiv.style.display = "none"
 
         menuIcon.style.position = "relative"
         menuIcon.style.left = "0"
       }
     },
-    toggleMenu() {
-      const hamburguerMenu = document.querySelector(".hamburguer-menu")
+    toggleMenu(hiddenElement) {
+      const hamburguerClassDivToShow  = ".hamburguer-div" === hiddenElement ? ".menu-icon" : ".hamburguer-div"
+      const hamburguerDivToShow = document.querySelector(hamburguerClassDivToShow)
+      const hamburguerDivToHidden = document.querySelector(hiddenElement)
+
       const menuIcon = document.querySelector(".menu-icon")
 
-      if (hamburguerMenu.style.display === "none" || hamburguerMenu.style.display === "") {
-        hamburguerMenu.style.display = "flex"
+      if (hamburguerClassDivToShow === ".hamburguer-div") {
+        console.log("entrou", hiddenElement, hamburguerClassDivToShow)
+        hamburguerDivToShow.style.display = "flex"
+        hamburguerDivToHidden.style.display = "none"
 
         menuIcon.style.position = "absolute"
-        menuIcon.style.left = "30%"
+        menuIcon.style.left = "65%"
         menuIcon.style.zIndex = "2"
 
       } else {
-        hamburguerMenu.style.display = "none"
+        console.log("entrou 2", hiddenElement, hamburguerClassDivToShow)
+        hamburguerDivToShow.style.display = "flex"
+        hamburguerDivToHidden.style.display = "none"
 
         menuIcon.style.position = "relative"
         menuIcon.style.left = "0"
-
       }
     },
     scrollToSessionAboutMe() {
@@ -187,19 +211,32 @@ li {
   cursor: pointer;
 }
 
-.hamburguer-menu {
+.hamburguer-div {
   display: none;
-  position: absolute;
-  width: 70%;
-  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
   right: 0;
-  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40%;
   z-index: 1;
 }
 
+.hamburguer-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 13% 0 0 25%;;
+  align-items: center;
+}
+
 .hamburguer-btn {
-  margin: 4% 0 0 0;
+  margin: 0 0 50% 0;
   cursor: pointer;
+  font:
+    500 20px "Montserrat",
+    sans-serif;
 }
 
 a {
@@ -253,6 +290,12 @@ a {
   display: none;
 }
 
+.menu-icon-div {
+  display: flex;
+  cursor: pointer;
+  margin: 13% 0 0 10%;
+}
+
 
 @media only screen and (max-width: 1000px) {
   .buttons-list, .btns {
@@ -265,6 +308,33 @@ a {
     justify-content: center;
     margin-right: 5%;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .hamburguer-menu {
+    margin: 13% 0 0 13%;
+  }
+
+  h1 {
+    margin-left: 3%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .hamburguer-btn {
+    font:
+      500 17px "Montserrat",
+      sans-serif;
+  }
+
+  .hamburguer-div img {
+    width: 25px;
+    height: 25px;
+  }
+
+  h1 {
+    margin-left: 5%;
   }
 }
 
