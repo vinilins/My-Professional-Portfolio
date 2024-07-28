@@ -81,6 +81,11 @@ p {
     sans-serif;
   text-align: center;
   width: 80%;
+
+  @media only screen and (min-width: 2100px) {
+    width: 60%;
+  }
+
 }
 
 .btn-download-resume {

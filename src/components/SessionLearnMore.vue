@@ -75,6 +75,11 @@ p {
     sans-serif;
   text-align: center;
   width: 65%;
+
+  @media only screen and (min-width: 2100px) {
+    width: 50%;
+  }
+
 }
 
 .btn-learn-more {
