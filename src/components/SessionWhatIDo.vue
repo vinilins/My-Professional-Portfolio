@@ -232,6 +232,26 @@ h3 {
   justify-content: space-between;
   width: 100%;
   margin-top: 10px;
+
+  @media only screen and (min-width: 2100px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 2100px) and (min-width: 1830px) {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: 1829px) and (min-width: 1530px) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 1030px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px 20px;
+    margin-bottom: 20px;
+  }
+  
 }
 
 .btn-clicked {
