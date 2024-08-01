@@ -1,6 +1,6 @@
 <template>
   <div class="session-footer">
-    <div class="line">
+    <div class="line line-up">
       <h1>Let's<br />Work Together -</h1>
 
       <a
@@ -133,5 +133,53 @@ a {
   width: 32px;
   height: 32px;
   margin: 0 10px 0 10px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .line-up h1 {
+    font-size: 50px;
+  }
+
+  .btn-send-email {
+    width: 250px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .line-up h1 {
+    font-size: 40px;
+  }
+
+  .btn-send-email {
+    font-size: 13px;
+    width: 220px;
+    height: 50px;
+  }
+
+  .btn-send-email img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .line-up {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line-up h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .btn-send-email {
+    width: 250px;
+    height: 60px;
+    font-size: 16px;
+  }
 }
 </style>
