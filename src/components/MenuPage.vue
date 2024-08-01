@@ -106,16 +106,20 @@ export default {
   },
   methods: {
     updateWindowSize() {
+      const hamburguerDiv = document.querySelector(".hamburguer-div")
+      const menuIcon = document.querySelector(".menu-icon")
+
       this.windowWidth = window.innerWidth;
       if (this.windowWidth > 1000) {
-        const hamburguerDiv = document.querySelector(".hamburguer-div")
-        const menuIcon = document.querySelector(".menu-icon")
 
         hamburguerDiv.style.display = "none"
 
+        menuIcon.style.display = "none"
         menuIcon.style.position = "relative"
         menuIcon.style.left = "0"
-      }
+      } else if (hamburguerDiv.style.display === "none") {
+          menuIcon.style.display = "flex"
+        }
     },
     toggleMenu(hiddenElement) {
       const hamburguerClassDivToShow  = ".hamburguer-div" === hiddenElement ? ".menu-icon" : ".hamburguer-div"
