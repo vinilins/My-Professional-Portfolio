@@ -2,7 +2,7 @@
   <div class="project-centralization">
     <div class="project-card">
       <div class="project-image">
-        <img :src="image" alt="Ícone de serviço" width="355px" height="199px" />
+        <img :src="image" alt="Ícone de serviço"/>
       </div>
 
       <h3>{{ title }}</h3>
@@ -45,13 +45,19 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 355px;
 }
 
 .project-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
   display: flex;
   justify-content: start;
   align-items: start;
+}
+
+.project-image img {
+  max-width: 100%;
 }
 
 h3 {
