@@ -1,7 +1,7 @@
 <template>
   <div class="centralization">
     <div class="session-learn-more">
-      <img alt="My Photo" src="../assets/photo.png" />
+      <img alt="My Photo" src="../assets/perfil-photo.png" />
       <h1>Vinícius Lins</h1>
       <h3>Software Engineer</h3>
       <p>
@@ -51,6 +51,8 @@ export default {
 
 img {
   margin-top: 10%;
+  width: 207px;
+  height: 207px;
 }
 
 h1 {
@@ -106,5 +108,21 @@ p {
   -webkit-transition: all 0.85s ease;
   -o-transition: all 0.85s ease;
   transition: all 0.85s ease;
+}
+
+@media only screen and (max-width: 620px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+    width: 80%;
+  }
 }
 </style>
