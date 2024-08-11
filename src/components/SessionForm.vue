@@ -137,4 +137,14 @@ textarea {
     sans-serif;
   margin-top: 10px;
 }
+
+@media only screen and (max-width: 730px) {
+  h1 {
+    line-height: 70px;
+    margin-bottom: 30px;
+  }
+  .session-form {
+    width: 70%;
+  }
+}
 </style>

@@ -200,9 +200,24 @@ export default {
 
 .services-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px 60px;
-  margin-top: 5%
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  margin-top: 5%;
+
+  @media only screen and (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 h1 {

@@ -65,7 +65,7 @@ export default {
 
 .projects-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   gap: 30px 120px;
   margin-top: 5%;
   width: 100%;
@@ -90,5 +90,12 @@ h3 {
 
 .btn-view-all {
   margin-top: 30px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .projects-cards {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+
 }
 </style>
