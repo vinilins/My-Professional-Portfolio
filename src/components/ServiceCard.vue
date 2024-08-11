@@ -26,11 +26,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 100%;
+  width: auto;
   background: linear-gradient(145deg, #1c1c1c 60%, #050505 180%);
   border: 1px solid #2b2b2b;
   border-radius: 20px;
   padding: 20px;
+  box-sizing: border-box;
+  margin: 0 10px 20px 10px;
 }
 
 .icon {
