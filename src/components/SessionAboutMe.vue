@@ -91,6 +91,10 @@ p {
     width: 60%;
   }
 
+  @media only screen and (max-width: 800px) {
+    width: 100%;
+    text-align: justify;
+  }
 }
 
 .btn-download-resume {
