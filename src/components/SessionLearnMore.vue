@@ -47,6 +47,8 @@ export default {
   background-image: url("../assets/background-about-me-full-screen.png");
   width: 60%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 img {
@@ -122,6 +124,10 @@ p {
   
   p {
     font-size: 14px;
+    width: 100%;
+  }
+
+  .session-learn-more {
     width: 80%;
   }
 }

@@ -63,6 +63,11 @@ h1 {
     700 63px "Poppins",
     sans-serif;
   letter-spacing: -3px;
+
+  @media only screen and (max-width: 400px) {
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
 }
 
 h3 {
