@@ -4,7 +4,10 @@
       <h1>Get in Touch</h1>
       <h3>Lets work together</h3>
 
-      <form action="/caminho_para_o_servidor" method="post">
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="accessKey" :value="accessKey">
+        <input type="hidden" name="redirectTo" value="https://www.linkedin.com/in/vinilins/?locale=en_US">
+
         <label for="name">Name</label>
         <input placeholder="Full Name" type="text" id="name" name="name" />
 
@@ -17,10 +20,9 @@
         />
 
         <label for="service">Service</label>
-        <select placeholder="Select a service" id="service" name="service">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
+        <select placeholder="Select a service" id="subject" name="subject">
+          <option value="job_opportunity">Job Opportunity</option>
+          <option value="freelance_work">Freelance Work </option>
         </select>
 
         <label for="message">Message</label>
@@ -35,6 +37,11 @@
 <script>
 export default {
   name: "SessionForm",
+  computed: {
+    accessKey() {
+      return process.env.VUE_APP_STATIC_FORM_ACESS_KEY
+    },
+  },
 }
 </script>
 
@@ -108,10 +115,11 @@ select {
   -moz-appearance: none;
   appearance: none;
   background: url("../assets/chevron-down.svg") no-repeat right center;
+  background-position-x: calc(100% - 15px);
 }
 
 select:focus {
-  color: #484e53;
+  color: #989da1;
   -webkit-transition: all 0.85s ease;
   -o-transition: all 0.85s ease;
   transition: all 0.85s ease;
@@ -136,6 +144,14 @@ textarea {
     700 15px "Montserrat",
     sans-serif;
   margin-top: 10px;
+}
+
+.btn-form:hover {
+  cursor: pointer;
+  background-color: #bbbbbb;
+  -webkit-transition: all 0.85s ease;
+  -o-transition: all 0.85s ease;
+  transition: all 0.85s ease;
 }
 
 @media only screen and (max-width: 730px) {
