@@ -137,9 +137,8 @@ export const pt_BR = {
         email: "Email",
         service: {
             label: "Serviço",
-            option1: "opção1",
-            option2: "opção2",
-            option3: "opção3",
+            option1: "Oportunidade de Trabalho",
+            option2: "Trabalho Freelance",
         },
         message: "Mensagem",
         sendButton: "Entrar em Contato",

@@ -50,6 +50,10 @@ img {
   margin-top: 10%;
   width: 207px;
   height: 207px;
+
+  @media only screen and (max-width: 700px) {
+    margin-top: 3%;
+  }
 }
 
 h1 {

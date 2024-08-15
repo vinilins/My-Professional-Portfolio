@@ -137,9 +137,8 @@ export const en = {
         email: "Email",
         service: {
             label: "Service",
-            option1: "option1",
-            option2: "option2",
-            option3: "option3",
+            option1: "Job Opportunity",
+            option2: "Freelance Work",
         },
         message: "Message",
         sendButton: "Get in Touch",
