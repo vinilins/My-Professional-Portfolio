@@ -4,16 +4,16 @@
 
     <ul class="buttons-list">
       <li class="menu-btn">
-        <a class="btn-links-page"> Home </a>
+        <a class="btn-links-page">{{ $t("header.menu.home") }}</a>
       </li>
       <li class="menu-btn">
-        <a class="btn-links-page" @click="scrollToSessionAboutMe">About</a>
+        <a class="btn-links-page" @click="scrollToSessionAboutMe">{{ $t("header.menu.about") }}</a>
       </li>
       <li class="menu-btn">
-        <a class="btn-links-page" @click="scrollToSessionServices">Services</a>
+        <a class="btn-links-page" @click="scrollToSessionServices">{{ $t("header.menu.services") }}</a>
       </li>
       <li class="menu-btn">
-        <a class="btn-links-page" @click="scrollToSessionProjects">Projects</a>
+        <a class="btn-links-page" @click="scrollToSessionProjects">{{ $t("header.menu.projects") }}</a>
       </li>
       <li class="menu-btn">
         <a
@@ -21,22 +21,25 @@
           target="_blank"
           rel="noopener"
           href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing"
-          >Resume</a
+          >{{ $t("header.menu.resume") }}</a
         >
       </li>
     </ul>
 
     <div class="btns">
       <button class="btn-contact-me" @click="scrollToSessionForm">
-        Contact Me
+        {{ $t("header.contactMeButton") }}
       </button>
-      <img
-        class="dark-mode"
-        src="../assets/dark-mode.svg"
-        alt="Dark Mode"
-        width="30"
-        height="30"
-      />
+      <div class="btns-dark-mode-language">
+        <img
+          class="dark-mode"
+          src="../assets/dark-mode.svg"
+          alt="Dark Mode"
+          width="30"
+          height="30"
+        />
+        <button class="btn-contact-me" @click="changeLanguage()">{{ $i18n.locale === 'pt_BR' ? 'English' : 'Português' }}</button>
+      </div>
     </div>
 
     <img
@@ -60,16 +63,19 @@
 
         <ul class="hamburguer-menu">
           <li class="hamburguer-btn">
-            <a class="btn-links-page" @click="toggleMenu('.hamburguer-div')"> Home </a>
+            <a class="btn-links-page" @click="toggleMenu('.hamburguer-div')">{{ $t("header.menu.home") }}</a>
           </li>
           <li class="hamburguer-btn">
-            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">About</a>
+            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">{{ $t("header.menu.about") }}</a>
           </li>
           <li class="hamburguer-btn">
-            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">Services</a>
+            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">{{ $t("header.menu.services") }}</a>
           </li>
           <li class="hamburguer-btn">
-            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">Projects</a>
+            <a class="btn-links-page" @click="scrollToSessionAboutMe(); toggleMenu('.hamburguer-div');">{{ $t("header.menu.projects") }}</a>
+          </li>
+          <li class="hamburguer-btn">
+            <a class="btn-links-page" @click="changeLanguage();">{{ $i18n.locale === 'pt_BR' ? 'English' : 'Português' }}</a>
           </li>
           <li class="hamburguer-btn">
             <a
@@ -77,7 +83,7 @@
               target="_blank"
               rel="noopener"
               href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing"
-              >Resume</a
+              >{{ $t("header.menu.resume") }}</a
             >
           </li>
           <img
@@ -105,6 +111,9 @@ export default {
     window.removeEventListener('resize', this.updateWindowSize);
   },
   methods: {
+    changeLanguage() {
+      this.$i18n.locale = this.$i18n.locale === 'pt_BR' ? 'en_US' : 'pt_BR'
+    },
     updateWindowSize() {
       const hamburguerDiv = document.querySelector(".hamburguer-div")
       const menuIcon = document.querySelector(".menu-icon")
@@ -284,6 +293,17 @@ a {
 
 .btn-links-page:hover {
   color: #4fc3f7;
+}
+
+.btns-dark-mode-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .btn-contact-me {
+    margin-left: 30px;
+  }
 }
 
 .dark-mode {
