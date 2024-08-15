@@ -35,8 +35,16 @@ export default {
   name: "SessionAboutMe",
   data() {
     return {
-      selectedCategory: "Python",
-      allCards: [
+      selectedCategory: "Python"
+    }
+  },
+  components: {
+    ServiceCard,
+    ButtonSecondary,
+  },
+  computed: {
+    allCards () {
+      return [
         { 
           title: this.$t("sessionWhatIDo.services.python.title"), 
           categories: ["Python", "Backend"],
@@ -145,12 +153,8 @@ export default {
           icon: require("../assets/technologies-icon/ci-cd-icon.png"),
           text: this.$t("sessionWhatIDo.services.cicd.text")
         },
-      ],
+      ]
     }
-  },
-  components: {
-    ServiceCard,
-    ButtonSecondary,
   },
   methods: {
     selectCategory(category, event) {
