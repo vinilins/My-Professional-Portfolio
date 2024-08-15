@@ -1,14 +1,14 @@
 <template>
   <div class="centralization">
     <div id="session-form" class="session-form">
-      <h1>Get in Touch</h1>
-      <h3>Lets work together</h3>
+      <h1>{{ $t("sessionForm.title") }}</h1>
+      <h3>{{ $t("sessionForm.caption") }}</h3>
 
       <form action="/caminho_para_o_servidor" method="post">
-        <label for="name">Name</label>
+        <label for="name">{{ $t("sessionForm.name") }}</label>
         <input placeholder="Full Name" type="text" id="name" name="name" />
 
-        <label for="email">Email</label>
+        <label for="email">{{ $t("sessionForm.email") }}</label>
         <input
           placeholder="example@email.com"
           type="email"
@@ -16,17 +16,17 @@
           name="email"
         />
 
-        <label for="service">Service</label>
+        <label for="service">{{ $t("sessionForm.service.label") }}</label>
         <select placeholder="Select a service" id="service" name="service">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
+          <option value="option1">{{ $t("sessionForm.service.option1") }}</option>
+          <option value="option2">{{ $t("sessionForm.service.option2") }}</option>
+          <option value="option3">{{ $t("sessionForm.service.option3") }}</option>
         </select>
 
-        <label for="message">Message</label>
+        <label for="message">{{ $t("sessionForm.message") }}</label>
         <textarea id="message" name="message"></textarea>
 
-        <button class="btn-form" type="submit">Get in Touch</button>
+        <button class="btn-form" type="submit">{{ $t("sessionForm.sendButton") }}</button>
       </form>
     </div>
   </div>

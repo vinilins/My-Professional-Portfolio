@@ -1,7 +1,7 @@
 <template>
   <div class="session-footer">
     <div class="line line-up">
-      <h1>Let's<br />Work Together -</h1>
+      <h1>{{ $t("sessionFooter.actionCallPart1") }}<br />{{ $t("sessionFooter.actionCallPart2") }}</h1>
 
       <a
         href="mailto:viniciusaclins@gmail.com"
@@ -17,7 +17,7 @@
     <div class="division"></div>
 
     <div class="line line-down">
-      <p class="footer-text">© 2024 all rights reserved.</p>
+      <p class="footer-text">{{ $t("sessionFooter.text") }}</p>
 
       <ul class="footer-links">
         <li>
