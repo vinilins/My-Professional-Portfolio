@@ -3,15 +3,10 @@
     <div class="session-learn-more">
       <img alt="My Photo" src="../assets/perfil-photo.png" />
       <h1>Vinícius Lins</h1>
-      <h3>Software Engineer</h3>
-      <p>
-        As a passionate software engineer with experience in web development,
-        backend, frontend, I thrive on the challenges of architecting project
-        structures and patterns to solve everyday problems in the development
-        environment.
-      </p>
+      <h3>{{ $t("sessionLearnMore.profession") }}</h3>
+      <p>{{ $t("sessionLearnMore.text") }}</p>
       <button @click="scrollToSessionAboutMe" class="btn-learn-more">
-        Learn More
+        {{ $t("sessionLearnMore.learnMoreButton") }}
       </button>
     </div>
   </div>

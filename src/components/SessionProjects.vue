@@ -1,29 +1,29 @@
 <template>
   <div class="centralization">
     <div id="session-projects" class="session-projects">
-      <h1>Projects</h1>
-      <h3>Some of my Work</h3>
+      <h1>{{ $t("sessionProjects.title") }}</h1>
+      <h3>{{ $t("sessionProjects.caption") }}</h3>
 
       <div class="projects-cards">
         <ProjectCard
           :image="ProjectImage"
-          title="SQL Project"
-          text="Technology used"
+          :title='$t("sessionProjects.projects.project1.title")'
+          :text='$t("sessionProjects.projects.project1.technologies")'
         />
         <ProjectCard
           :image="ProjectImage"
-          title="Project 2"
-          text="Web Design / Usability Testing"
+          :title='$t("sessionProjects.projects.project2.title")'
+          :text='$t("sessionProjects.projects.project2.technologies")'
         />
         <ProjectCard
           :image="ProjectImage"
-          title="Project 3"
-          text="Python / Machine Learning"
+          :title='$t("sessionProjects.projects.project3.title")'
+          :text='$t("sessionProjects.projects.project3.technologies")'
         />
         <ProjectCard
           :image="ProjectImage"
-          title="Project 3"
-          text="Python / Machine Learning"
+          :title='$t("sessionProjects.projects.project4.title")'
+          :text='$t("sessionProjects.projects.project4.technologies")'
         />
       </div>
     </div>

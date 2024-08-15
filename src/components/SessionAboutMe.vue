@@ -1,27 +1,11 @@
 <template>
   <div class="centralization">
     <div id="session-about-me" class="session-about-me">
-      <h1>About Me</h1>
-      <h3>Get to know me</h3>
-      <p>
-        Hi there! I'm Vinícius, a Software Engineer specializing in web
-        development, backend, frontend and websites. With a passion for using
-        design patterns for development, I am dedicated to helping customers
-        through software solutions to become more independent and automated
-        through systems or websites, giving them productive time to focus their
-        efforts on other areas or topics.
-      </p>
-      <p>
-        I bring a mix of technical knowledge, practical experience and a
-        commitment to clear communication for each project, whether simple web
-        systems, or developing complex systems that involve multiple business
-        rules useful for each context
-      </p>
-      <p>
-        Let's work together to turn ideas into actionable insights that generate
-        real results. Get in touch and let's start unlocking the advancement of
-        technology!
-      </p>
+      <h1>{{ $t("sessionAboutMe.title") }}</h1>
+      <h3>{{ $t("sessionAboutMe.caption") }}</h3>
+      <p>{{ $t("sessionAboutMe.text1") }}</p>
+      <p>{{ $t("sessionAboutMe.text2") }}</p>
+      <p>{{ $t("sessionAboutMe.text3") }}</p>
 
       <a
         class="btn-download-resume"
@@ -29,7 +13,7 @@
         rel="noopener"
         href="https://drive.google.com/file/d/1dWMkpoB3EAK2q2FpCX9O0bkOe77M6yJz/view?usp=sharing"
       >
-        Download Resume
+      {{ $t("sessionAboutMe.downloadResumeButton") }}
       </a>
     </div>
   </div>
